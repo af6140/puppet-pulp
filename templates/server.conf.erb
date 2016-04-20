@@ -144,7 +144,7 @@ rsa_pub = <%= scope['pulp::rsa_pub'] %>
 [security]
 cacert: <%= scope['pulp::ca_cert'] %>
 cakey: <%= scope['pulp::ca_key'] %>
-ssl_ca_certificate: <%= scope['pulp::ssl_ca_cert'] %>
+ssl_ca_certificate: <%= scope['pulp::ca_cert'] %>
 user_cert_expiration: <%= scope['pulp::user_cert_expiration'] %>
 consumer_cert_expiration: <%= scope['pulp::consumer_cert_expiration'] %>
 serial_number_path: <%= scope['pulp::serial_number_path'] %>
