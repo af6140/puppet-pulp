@@ -14,7 +14,7 @@ class pulp::apache {
         priority            => '05',
         docroot             => '/usr/share/pulp/wsgi',
         port                => 80,
-        servername          => $::fqdn,
+        servername          => $pulp::servername,
         serveraliases       => [$::hostname],
         additional_includes => '/etc/pulp/vhosts80/*.conf',
       }
@@ -24,7 +24,7 @@ class pulp::apache {
       priority                   => '05',
       docroot                    => '/usr/share/pulp/wsgi',
       port                       => 443,
-      servername                 => $::fqdn,
+      servername                 => $pulp::servername,
       serveraliases              => [$::hostname],
       ssl                        => true,
       ssl_cert                   => $pulp::https_cert,
